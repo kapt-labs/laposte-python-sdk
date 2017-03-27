@@ -24,6 +24,24 @@ class TestSuiviApi(TestBase):
         self.assertEquals(responses.calls[0].request.url, 'https://api.laposte.fr/suivi/v1/1111111111111')
         self.assertEquals(responses.calls[0].request.headers['X-Okapi-Key'], 'TheApiKey')
 
+    @responses.activate
+    def test_bad_request(self):
+        responses.add(responses.GET,
+                'https://api.laposte.fr/suivi/v1/123',
+                json={'code': 'BAD_REQUEST', 'message': 'Mauvais format pour le paramètre code'}, status=200)
+
+        with self.assertRaises(Exception):
+            self.api.suivi.get('123')
+
+    @responses.activate
+    def test_resource_not_found(self):
+        responses.add(responses.GET,
+                'https://api.laposte.fr/suivi/v1/1111111111119',
+                json={'code': 'RESOURCE_NOT_FOUND', 'message': 'Aucun produit ne correspond à votre recherche'}, status=200)
+
+        with self.assertRaises(Exception):
+            self.api.suivi.get('1111111111119')
+
 class TestControlAdresseApi(TestBase):
     @responses.activate
     def test_search(self):
