@@ -18,12 +18,16 @@ class ApiBase(object):
         if self.entity is None:
             return response
 
+        return self.create_object(response, self.entity)
+
+    def _get(self, resource, params={}):
+        r = requests.get(self.api_url + resource, params=params, headers=self.headers)
+        return r.json()
+
+    def create_object(self, response, entity):
         module = import_module('lapostesdk.entities')
         obj = getattr(module, self.entity)
         instance = obj()
         instance.hydrate(response)
         return instance
 
-    def _get(self, resource, params={}):
-        r = requests.get(self.api_url + resource, params=params, headers=self.headers)
-        return r.json()
