@@ -2,10 +2,10 @@ from setuptools import setup
 
 setup(
     name='lapostesdk',
-    version='0.1.1',
+    version='0.1.2',
     author='Guillaume Luchet',
     author_email='guillaume@geelweb.org',
-    packages=['lapostesdk', 'lapostesdk.apis'],
+    packages=['lapostesdk', 'lapostesdk.apis', 'lapostesdk.entities'],
     url='https://github.com/geelweb/laposte-python-sdk',
     download_url='https://github.com/geelweb/laposte-python-sdk/archive/0.1.1.tar.gz',
     description='La Poste SDK',
