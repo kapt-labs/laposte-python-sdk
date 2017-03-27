@@ -15,11 +15,11 @@ Installation
 Requirements
 ------------
 
- - requests
+* requests
 
 Dev requirements
 
- - responses
+* responses
 
 Configuration
 -------------
