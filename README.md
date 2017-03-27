@@ -10,10 +10,18 @@ LaPosteSDK is a Python client library to work with [La Poste API](https://develo
 
  - requests
 
+Dev requirements
+
+ - responses
+
 ## Configuration
 
     from lapostesdk.laposteapi import LaPosteApi
     api = LaPosteApi(api_key='YourApiKey')
+
+## Test suite
+
+    python -m unittest test
 
 ## Apis
 
@@ -23,16 +31,17 @@ The [ControlAdresse Api](https://developer.laposte.fr/products/controladresse/la
 
 **Address look up**
 
-    api.controladresse.search('116 avenue du Président Kennedy 75220 Paris Cedex 16')
+    response = api.controladresse.search('116 avenue du Président Kennedy 75220 Paris Cedex 16')
 
 **Address details**
 
-    api.controladresse.get('adresses/12280852')
-
+    adresse = api.controladresse.get('adresses/12280852')
+    print adresse.codePostal
 
 ### Suivi
 
 The [Suivi Api](https://developer.laposte.fr/products/suivi/latest)
 
-    api.suivi.get('1111111111111')
+    suivi = api.suivi.get('1111111111111')
+    print suivi.status
 
