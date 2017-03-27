@@ -6,9 +6,9 @@ setup(
     author='Guillaume Luchet',
     author_email='guillaume@geelweb.org',
     packages=['lapostesdk', 'lapostesdk.apis'],
-    url='http://pypi.python.org/pypi/lapostesdk',
+    url='https://github.com/geelweb/laposte-python-sdk',
+    download_url='https://github.com/geelweb/laposte-python-sdk/archive/0.1.tar.gz',
     description='La Poste SDK',
-    long_description=open('README.md').read(),
     install_requires=[
         'requests>=2.4.3'
     ],
