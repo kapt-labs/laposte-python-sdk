@@ -1,5 +1,7 @@
 # La Poste SDK
 
+![build status](https://travis-ci.org/geelweb/laposte-python-sdk.svg?branch=master)
+
 LaPosteSDK is a Python client library to work with [La Poste API](https://developer.laposte.fr/products)
 
 ## Installation
