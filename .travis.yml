@@ -11,6 +11,12 @@ install:
   - pip install .
   - pip install requests
   - pip install responses
+  - pip install coveralls
+  - pip install coverage
+  - pip install unittest
 
 script:
-  - python -m unittest test
+  - coverage run --source=lapostesdk test.py
+
+after_success:
+  - coveralls
