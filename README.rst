@@ -1,7 +1,12 @@
 La Poste SDK
 ============
 
-|build status|
+.. image:: https://travis-ci.org/geelweb/laposte-python-sdk.svg?branch=master
+    :target: https://travis-ci.org/geelweb/laposte-python-sdk
+.. image:: https://coveralls.io/repos/github/geelweb/laposte-python-sdk/badge.svg?branch=python3
+    :target: https://coveralls.io/github/geelweb/laposte-python-sdk?branch=python3
+.. image:: https://img.shields.io/badge/python-2.7%2C%20~3.3-blue.svg
+
 
 LaPosteSDK is a Python client library to work with `La Poste API <https://developer.laposte.fr/products>`_
 
@@ -67,5 +72,3 @@ The `Suivi Api <https://developer.laposte.fr/products/suivi/latest>`_
     suivi = api.suivi.get('1111111111111')
     print suivi.status
 
-
-.. |build status| image:: https://travis-ci.org/geelweb/laposte-python-sdk.svg?branch=master
