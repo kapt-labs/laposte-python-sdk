@@ -5,7 +5,7 @@ La Poste SDK
     :target: https://travis-ci.org/geelweb/laposte-python-sdk
 .. image:: https://coveralls.io/repos/github/geelweb/laposte-python-sdk/badge.svg?branch=python3
     :target: https://coveralls.io/github/geelweb/laposte-python-sdk?branch=python3
-.. image:: https://img.shields.io/badge/python-2.7%2C%20~3.2-blue.svg
+.. image:: https://img.shields.io/badge/python-2.7%2C%20~3.3-blue.svg
 
 
 LaPosteSDK is a Python client library to work with `La Poste API <https://developer.laposte.fr/products>`_
