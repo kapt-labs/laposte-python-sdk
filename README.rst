@@ -3,8 +3,8 @@ La Poste SDK
 
 .. image:: https://travis-ci.org/geelweb/laposte-python-sdk.svg?branch=master
     :target: https://travis-ci.org/geelweb/laposte-python-sdk
-.. image:: https://coveralls.io/repos/github/geelweb/laposte-python-sdk/badge.svg?branch=python3
-    :target: https://coveralls.io/github/geelweb/laposte-python-sdk?branch=python3
+.. image:: https://coveralls.io/repos/github/geelweb/laposte-python-sdk/badge.svg?branch=master
+    :target: https://coveralls.io/github/geelweb/laposte-python-sdk?branch=master
 .. image:: https://img.shields.io/badge/python-2.7%2C%20~3.3-blue.svg
 
 
