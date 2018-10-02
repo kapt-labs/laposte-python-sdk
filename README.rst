@@ -72,3 +72,51 @@ The `Suivi Api <https://developer.laposte.fr/products/suivi/latest>`_
     suivi = api.suivi.get('1111111111111')
     print suivi.status
 
+Tarif envoi
+~~~~~~~~~~~~~
+
+The `Tarif envoi <https://developer.laposte.fr/products/tarifenvoi/latest>`_
+
+Simple call
+^^^^^^^^^^^^^^^
+
+.. code-block:: python
+
+    rates = api.tarifenvoi.get('lettre', 10)
+
+    >>> [{'channel': u'bureau',
+          'currency': u'\u20ac',
+          'price': 0.8,
+          'product': u'Lettre verte'},
+         {'channel': u'en ligne',
+          'currency': u'\u20ac',
+          'price': 0.77,
+          'product': u'Lettre verte'},
+         {'channel': u'bureau',
+          'currency': u'\u20ac',
+          'price': 0.95,
+          'product': u'Lettre prioritaire'},
+         {'channel': u'en ligne',
+          'currency': u'\u20ac',
+          'price': 0.92,
+          'product': u'Lettre prioritaire'},
+         {'channel': u'bureau',
+          'currency': u'\u20ac',
+          'price': 0.78,
+          'product': u'Ecopli'}]
+
+
+Filtered call
+^^^^^^^^^^^^^^^
+
+.. code-block:: python
+    from lapostesdk.constants.tarifenvoi import TarifEnvoiChannels
+    from lapostesdk.constants.tarifenvoi import TarifEnvoiProducts
+
+    rates = api.tarifenvoi.get('lettre', 10, channels=[TarifEnvoiChannels.online], products=[TarifEnvoiProducts.first_class_mail])
+
+    >>> [{'channel': u'en ligne',
+          'currency': u'\u20ac',
+          'price': 0.92,
+          'product': u'Lettre prioritaire'}]
+
